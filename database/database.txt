@@ -1,0 +1,5 @@
+Banco de Dados: MySQL Server 8.0
+
+Database: projetoLP2
+User:     root
+Senha:    lp2ifsp2018

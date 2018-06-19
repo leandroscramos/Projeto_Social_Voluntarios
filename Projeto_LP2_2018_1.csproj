@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73D6E4E5-9A88-40BA-B658-86404511B28E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projeto_LP2_2018_1</RootNamespace>
+    <AssemblyName>Projeto_LP2_2018_1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>C:\Users\Leandro\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D0CD7794590954DE5B18BAE72C6744660208B66E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Projeto_LP2_2018_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dao\AlunoDAO.cs" />
+    <Compile Include="dao\AtividadeDAO.cs" />
+    <Compile Include="dao\LoginDAO.cs" />
+    <Compile Include="dao\SalaDAO.cs" />
+    <Compile Include="model\AlunoModel.cs" />
+    <Compile Include="model\AtividadeModel.cs" />
+    <Compile Include="util\DataBase.cs" />
+    <Compile Include="model\SalaModel.cs" />
+    <Compile Include="dao\VoluntarioDAO.cs" />
+    <Compile Include="util\ValidaDigitoCPF.cs" />
+    <Compile Include="view\AlunoCadView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\AlunoCadView.Designer.cs">
+      <DependentUpon>AlunoCadView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\AlunoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\AlunoView.Designer.cs">
+      <DependentUpon>AlunoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\AtividadeCadView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\AtividadeCadView.Designer.cs">
+      <DependentUpon>AtividadeCadView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\AtividadeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\AtividadeView.Designer.cs">
+      <DependentUpon>AtividadeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\HomeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\HomeView.Designer.cs">
+      <DependentUpon>HomeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="model\VoluntarioModel.cs" />
+    <Compile Include="view\SalaCadView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\SalaCadView.Designer.cs">
+      <DependentUpon>SalaCadView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\SalaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\SalaView.Designer.cs">
+      <DependentUpon>SalaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\VoluntarioCadView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\VoluntarioCadView.Designer.cs">
+      <DependentUpon>VoluntarioCadView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\VoluntarioView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\VoluntarioView.Designer.cs">
+      <DependentUpon>VoluntarioView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\AlunoCadView.resx">
+      <DependentUpon>AlunoCadView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\AlunoView.resx">
+      <DependentUpon>AlunoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\AtividadeCadView.resx">
+      <DependentUpon>AtividadeCadView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\AtividadeView.resx">
+      <DependentUpon>AtividadeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\HomeView.resx">
+      <DependentUpon>HomeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\SalaCadView.resx">
+      <DependentUpon>SalaCadView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\SalaView.resx">
+      <DependentUpon>SalaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\VoluntarioCadView.resx">
+      <DependentUpon>VoluntarioCadView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\VoluntarioView.resx">
+      <DependentUpon>VoluntarioView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Projeto_LP2_2018_1_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
