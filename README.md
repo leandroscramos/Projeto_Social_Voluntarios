@@ -1,4 +1,4 @@
-# Projeto-Social
+# Projeto_Social_Voluntarios
 Projeto criado para a disciplina de Linguagem de Programação 2 do curso de ADS do IFSP São Carlos.
 
 -----------------------------------------------------------------------------------------------------------------------
